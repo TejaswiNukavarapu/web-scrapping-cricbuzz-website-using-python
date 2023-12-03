@@ -1,20 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
 
+Line-1:
 
+either run the below command 
 get_ipython().system(' pip install beautifulsoup4')
 
+ or if in jupyter or any other python compiler platforms directly runthe command
+! pip install beautifulsoup
 
-# In[3]:
+Line-2:
 
-
+either run the below command 
 get_ipython().system(' pip install requests')
+ or if in jupyter or any other python compiler platforms directly runthe command
+! pip install requests
 
 
-# In[5]:
-
+Line-3:
 
 import sys
 import time
@@ -23,8 +27,7 @@ import requests
 import pandas as pd
 
 
-# In[16]:
-
+Line-4:
 
 try:
     page=requests.get('https://www.cricbuzz.com/')
@@ -37,33 +40,29 @@ soup=BeautifulSoup(page.text,'html.parser')
 links=soup.find_all('div', attrs={"class":"cb-nws-intr"})
 
 
-# In[17]:
-
+Line-5:
 
 page
 
 
-# In[18]:
-
+Line-6:
 
 soup
 
 
-# In[19]:
-
+Line-7:
 
 links
 
 
-# In[20]:
-
+Line-8:
 
 for i in links:
     print(i.text)
     print("\n")
 
 
-# In[ ]:
+
 
 
 
